@@ -14,10 +14,16 @@ let day = date.getDate();
 let month = date.getMonth();
 let year = date.getFullYear();
 
-let selectedDate = date;
-let selectedDay = day;
-let selectedMonth = month;
-let selectedYear = year;
+let selectedDate;
+let selectedDay;
+let selectedMonth;
+let selectedYear;
+
+let selectedDateTwo;
+let selectedDayTwo;
+let selectedMonthTwo;
+let selectedYearTwo;
+
 
 mth_element.textContent = months[month] + ' ' + year;
 
@@ -78,6 +84,8 @@ function populateDates (e) {
 			day_element.classList.add('selected');
 		}
 
+        else if(sel)
+
 		day_element.addEventListener('click', function () {
 			selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1));
 			selectedDay = (i + 1);
@@ -94,7 +102,9 @@ function populateDates (e) {
 	}
 }
 
-
+function validateRange(currentDay){
+    if (selectedDate > selectedDateTwo)
+}
 
 /* Funciones "helper" */
 function checkEventPathForClass (path, selector) {
